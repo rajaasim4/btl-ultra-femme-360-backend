@@ -1,0 +1,21 @@
+{
+  "name": "btl-ultra-femme-360-backend",
+  "version": "1.0.0",
+  "description": "Backend for OTP verification",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1",
+    "twilio": "^5.10.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
