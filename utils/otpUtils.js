@@ -139,7 +139,8 @@ const verifyOTP = async (otpStore, phoneNumber, submittedOTP) => {
  * @returns {string} - Formatted message
  */
 const formatOTPMessage = (otp) => {
-  return `Your verification code is: ${otp}. This code will expire in 5 minutes.`;
+  return `שלום! אנחנו כמעט מסיימים 🙂
+להשלמת בדיקת ההתאמה, יש להזין בשאלון את הקוד הבא: ${otp}`;
 };
 
 module.exports = {
