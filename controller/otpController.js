@@ -5,6 +5,7 @@ const {
   generateOTP,
   verifyOTP,
   hashOTP,
+  formatOTPMessage,
 } = require("../utils/otpUtils");
 
 // Store OTPs temporarily (in production, use Redis or similar)
@@ -21,7 +22,8 @@ const sendOTP = async (req, res) => {
     phoneNumber = formatPhoneNumber(phoneNumber);
 
     const otp = generateOTP();
-    const message = `Your verification code is: ${otp}`;
+    const message = formatOTPMessage(otp);
+    // const message = `Your verification code is: ${otp}`;
     console.log(message);
 
     const client = twilioService.initializeTwilio();
